@@ -23,7 +23,7 @@ class ProductApi {
     }
     
     private func getCategory(accessToken: String) -> URL? {
-        return URL(string: url + "/v1/categories?access_token=\(accessToken)")
+        return URL(string: url + "/categories?access_token=\(accessToken)")
     }
     
     let params: Parameters = [
@@ -55,7 +55,7 @@ class ProductApi {
             let req = Alamofire.request(self.getCategory(accessToken: self.access_token)!, parameters: self.params).responseObject {(response: DataResponse<Categories>) in
                 switch response.result {
                 case .success(let res):
-                    observer.onNext(res.posts)
+                    observer.onNext(res.category)
                     observer.onCompleted()
                 case .failure(let error):
                     observer.onError(error)

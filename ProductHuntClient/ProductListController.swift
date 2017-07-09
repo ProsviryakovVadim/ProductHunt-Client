@@ -10,36 +10,28 @@ import UIKit
 import RxSwift
 import KVNProgress
 
+
 class ProductListController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private var refreshControl = UIRefreshControl()
     private let disposeBag = DisposeBag()
     fileprivate var product: [Product] = []
-    
-    var category = "" {
-        didSet {
-            tableView.reloadData()
-            downloadProduct()
-        }
-    }
+    var category = "Tech"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.rowHeight = 88
+        title = category
         KVNProgress.show()
-        KVNProgress.showSuccess {
-            if self.category == "" {
-                self.category = "Tech"
-            }
-        }
         downloadProduct()
         refreshDown()
     }
     
+    
     func refreshDown() {
         refreshControl = UIRefreshControl()
-        refreshControl.attributedTitle = NSAttributedString(string: "Data is updated")
+        // refreshControl.attributedTitle = NSAttributedString(string: "Data is updated")
         refreshControl.addTarget(self, action: #selector(ProductListController.refreshData(sender:)), for: .valueChanged)
         tableView.addSubview(refreshControl)
     }
@@ -60,7 +52,6 @@ class ProductListController: UIViewController {
             }
         }
     }
-
     
     private func downloadProduct() {
         ProductApi.instance.getProducts(category: category.localizedLowercase).subscribe(onNext: { [weak self] product in
@@ -72,6 +63,13 @@ class ProductListController: UIViewController {
             self?.tableView.reloadData()
             KVNProgress.dismiss()
         }).addDisposableTo(disposeBag)
+    }
+    
+
+    @IBAction func menuSelect(_ sender: Any) {
+        let profileVC = storyboard!.instantiateViewController(withIdentifier: "MenuSelected")
+        let nc = NavigationController(rootViewController: profileVC)
+        present(nc, animated: true)
     }
     
     
@@ -89,7 +87,6 @@ class ProductListController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
     
 }
 

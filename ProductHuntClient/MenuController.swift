@@ -18,7 +18,7 @@ final class MenuController : UIViewController {
     @IBOutlet weak var tech: UIButton!
     @IBOutlet weak var games: UIButton!
     @IBOutlet weak var books: UIButton!
-    @IBOutlet weak var artificial: UIButton!
+    @IBOutlet weak var podcasts: UIButton!
     @IBOutlet weak var developer: UIButton!
     @IBOutlet weak var home: UIButton!
     
@@ -26,7 +26,7 @@ final class MenuController : UIViewController {
     fileprivate var interactiveDismiss: Bool = false
     fileprivate var dismiss: Bool = false
     fileprivate var fromViewSuperview: UIView!
-        
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         transitioningDelegate = self
@@ -52,22 +52,43 @@ final class MenuController : UIViewController {
     }
     
     @IBAction func selectTech() {
-        let balanceVC = storyboard!.instantiateViewController(withIdentifier: "select") as! ProductListController
-        let nc = NavigationController(rootViewController: balanceVC)
+        let newVc = storyboard!.instantiateViewController(withIdentifier: "select") as! ProductListController
+        let nc = NavigationController(rootViewController: newVc)
         present(nc, animated: true) {
-            balanceVC.title = (self.tech.titleLabel?.text)!
-            balanceVC.category = (self.tech.titleLabel?.text)!
+            newVc.title = (self.tech.titleLabel?.text)!
+            newVc.category = (self.tech.titleLabel?.text)!
         }
     }
     
     @IBAction func selectGames() {
-        let balanceVC = storyboard!.instantiateViewController(withIdentifier: "select") as! ProductListController
-        let nc = NavigationController(rootViewController: balanceVC)
+        let newVc = storyboard!.instantiateViewController(withIdentifier: "select") as! ProductListController
+        let nc = NavigationController(rootViewController: newVc)
         present(nc, animated: true) {
-            balanceVC.title = (self.games.titleLabel?.text)!
-            balanceVC.category = (self.games.titleLabel?.text)!
+            newVc.title = (self.games.titleLabel?.text)!
+            newVc.category = (self.games.titleLabel?.text)!
         }
     }
+    
+    @IBAction func selectBooks() {
+        let newVc = storyboard!.instantiateViewController(withIdentifier: "select") as! ProductListController
+        let nc = NavigationController(rootViewController: newVc)
+        present(nc, animated: true) {
+            newVc.title = (self.books.titleLabel?.text)!
+            newVc.category = (self.books.titleLabel?.text)!
+        }
+    }
+    
+    @IBAction func selectPodcasts() {
+        let newVc = storyboard!.instantiateViewController(withIdentifier: "select") as! ProductListController
+        let nc = NavigationController(rootViewController: newVc)
+        present(nc, animated: true) {
+            newVc.title = (self.podcasts.titleLabel?.text)!
+            newVc.category = (self.podcasts.titleLabel?.text)!
+        }
+    }
+    
+    
+    
 }
 
 // MARK: - UIViewControllerTransitioningDelegate

@@ -55,7 +55,7 @@ extension ProductDetailController: UITableViewDataSource {
             })
             cell.nameProductDetail.text = productDetail?.nameProduct
             cell.descriptionProductDetail.text = productDetail?.descriptionProduct
-            tableView.rowHeight = 88
+            tableView.rowHeight = 90
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "screenshotCell", for: indexPath) as! ProductScreenshotCell
@@ -72,7 +72,7 @@ extension ProductDetailController: UITableViewDataSource {
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: "getItCell", for: indexPath) as! ProductGetItCell
-            tableView.rowHeight = 44
+            tableView.rowHeight = 50
             return cell
         default: break
         }

@@ -2,4 +2,54 @@
 <Bucket
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProductHuntClient/ProductApi.swift"
+            timestampString = "521296676.138934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getCategory()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProductHuntClient.ProductApi.(getCategory () -&gt; RxSwift.Observable&lt;Swift.Array&lt;ProductHuntClient.Category&gt;&gt;).(closure #1)"
+                  moduleName = "ProductHuntClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Vadim/Documents/Development/SWIFT/ProductHuntClient/ProductHuntClient/ProductApi.swift"
+                  timestampString = "521296780.213917"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "47">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProductHuntClient.ProductApi.(getCategory () -&gt; RxSwift.Observable&lt;Swift.Array&lt;ProductHuntClient.Category&gt;&gt;).(closure #1).(closure #1)"
+                  moduleName = "ProductHuntClient"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Vadim/Documents/Development/SWIFT/ProductHuntClient/ProductHuntClient/ProductApi.swift"
+                  timestampString = "521296780.215566"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "56"
+                  endingLineNumber = "56"
+                  offsetFromSymbolStart = "153">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

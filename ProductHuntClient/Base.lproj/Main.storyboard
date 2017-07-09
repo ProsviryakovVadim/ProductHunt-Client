@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dRl-tj-qaY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="81c-4G-SHs">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,8 +10,13 @@
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Tech-->
+        <!--Title-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="select" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" id="BYZ-38-t0r" customClass="ProductListController" customModule="ProductHuntClient" customModuleProvider="target" sceneMemberID="viewController">
@@ -96,11 +101,11 @@ Share what's on your mind
                             <constraint firstItem="lSf-Pc-uxz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yOZ-Ir-ujG"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Tech" id="QtZ-va-inf">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="XhZ-9l-kMd">
+                    <navigationItem key="navigationItem" title="Title" id="Lr2-NX-kJ2">
+                        <barButtonItem key="leftBarButtonItem" image="menu" style="plain" id="zgX-3F-Se2">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
-                                <segue destination="R6P-1f-Qdl" kind="presentation" modalPresentationStyle="overFullScreen" modalTransitionStyle="crossDissolve" id="iHH-9B-o8g"/>
+                                <action selector="menuSelect:" destination="BYZ-38-t0r" id="yyM-UD-EJm"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -110,7 +115,7 @@ Share what's on your mind
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1337" y="145"/>
+            <point key="canvasLocation" x="2512.8000000000002" y="115.59220389805098"/>
         </scene>
         <!--Product Detail Controller-->
         <scene sceneID="Hnn-Nz-tia">
@@ -128,11 +133,11 @@ Share what's on your mind
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="88" id="fGW-Ss-aHS" customClass="ProductDetailCell" customModule="ProductHuntClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="88"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="detailCell" rowHeight="90" id="fGW-Ss-aHS" customClass="ProductDetailCell" customModule="ProductHuntClient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fGW-Ss-aHS" id="9Ry-wy-Y2A">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="89.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="YouMap" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hC3-Wp-fQW">
@@ -192,7 +197,7 @@ Share what's on your mind
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="screenshotCell" rowHeight="250" id="S0S-4Z-dFO" customClass="ProductScreenshotCell" customModule="ProductHuntClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="375" height="250"/>
+                                        <rect key="frame" x="0.0" y="118" width="375" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S0S-4Z-dFO" id="3gy-04-LwW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
@@ -213,15 +218,15 @@ Share what's on your mind
                                             <outlet property="screenshotProductDetail" destination="c7e-Ug-i98" id="DEm-aB-eQ2"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="getItCell" rowHeight="44" id="nVF-4h-Zj5" customClass="ProductGetItCell" customModule="ProductHuntClient" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="366" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="getItCell" rowHeight="66" id="nVF-4h-Zj5" customClass="ProductGetItCell" customModule="ProductHuntClient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="368" width="375" height="66"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nVF-4h-Zj5" id="ABS-un-DGF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naG-CL-P87">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="65.5"/>
                                                     <color key="backgroundColor" red="0.86364156007766724" green="0.33104360103607178" blue="0.1458040177822113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="GET IT">
@@ -262,7 +267,7 @@ Share what's on your mind
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vOT-qv-dox" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2224.8000000000002" y="441.22938530734638"/>
+            <point key="canvasLocation" x="3361" y="116"/>
         </scene>
         <!--Web Controller-->
         <scene sceneID="Mr6-ba-6Dz">
@@ -301,25 +306,7 @@ Share what's on your mind
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOi-ar-Rj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2984.8000000000002" y="440.32983508245883"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="HVi-gw-lHN">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dRl-tj-qaY" customClass="NavigationController" customModule="ProductHuntClient" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="I8s-Bh-urw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Jug-PO-0Gi"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WK9-TQ-YwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="585" y="147"/>
+            <point key="canvasLocation" x="4254" y="116"/>
         </scene>
         <!--Menu Controller-->
         <scene sceneID="tQI-me-O1E">
@@ -372,7 +359,7 @@ Share what's on your mind
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="sSK-Tf-5GR"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Tech" image="tech">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -389,7 +376,7 @@ Share what's on your mind
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="bxC-KC-0Li"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Games" image="games">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -403,7 +390,7 @@ Share what's on your mind
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wnN-FW-bWZ">
                                                 <rect key="frame" x="0.0" y="80" width="218" height="32"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Books" image="books">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -411,24 +398,30 @@ Share what's on your mind
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="0.0" alpha="0.70420258619999998" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectBooks" destination="R6P-1f-Qdl" eventType="touchUpInside" id="akJ-wC-uGe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkO-cg-Ckr">
                                                 <rect key="frame" x="0.0" y="120" width="218" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="vrJ-jY-Nfh"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="Artificial Intelligence" image="artificial">
+                                                <state key="normal" title="Podcasts" image="artificial">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <state key="highlighted">
                                                     <color key="titleColor" white="0.0" alpha="0.70420258619999998" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="selectPodcasts" destination="R6P-1f-Qdl" eventType="touchUpInside" id="5Il-py-vuP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQX-Gv-J9v">
                                                 <rect key="frame" x="0.0" y="160" width="218" height="32"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Developer Tools" image="developer">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -439,7 +432,7 @@ Share what's on your mind
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOT-C1-Nwq">
                                                 <rect key="frame" x="0.0" y="200" width="218" height="32"/>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <state key="normal" title="Home" image="home">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -490,7 +483,6 @@ Share what's on your mind
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="artificial" destination="xkO-cg-Ckr" id="Y6h-NI-tXJ"/>
                         <outlet property="books" destination="wnN-FW-bWZ" id="9Lu-VU-lLy"/>
                         <outlet property="developer" destination="fQX-Gv-J9v" id="E0B-RL-umv"/>
                         <outlet property="dimmingView" destination="egG-2T-AoW" id="eUc-2A-OQR"/>
@@ -498,12 +490,103 @@ Share what's on your mind
                         <outlet property="home" destination="mOT-C1-Nwq" id="2u2-ZG-Vg4"/>
                         <outlet property="menuLeftConstraint" destination="rhA-sT-3V1" id="x9m-0t-D7G"/>
                         <outlet property="menuView" destination="o9E-xB-1jS" id="fDA-9J-P3w"/>
+                        <outlet property="podcasts" destination="xkO-cg-Ckr" id="glY-TA-B9y"/>
                         <outlet property="tech" destination="Hs7-ix-Jn6" id="qFN-ie-aXr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FvD-7k-L7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2225" y="-224"/>
+            <point key="canvasLocation" x="4254" y="-648"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="8DU-eS-sPg">
+            <objects>
+                <viewController storyboardIdentifier="MenuSelected" id="zRO-6c-oaH" customClass="MenuSelectedController" customModule="ProductHuntClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nsd-1W-yjb"/>
+                        <viewControllerLayoutGuide type="bottom" id="uan-2B-eKj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13e-7m-U60">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="doS-5W-jJt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <imageView key="tableHeaderView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="product-hunt-vertical-logo-red" id="YC0-bD-tdo">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="188"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="gXg-yA-AiJ" customClass="MenuSelectedCell" customModule="ProductHuntClient" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="216" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gXg-yA-AiJ" id="gJA-bg-nyF">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTT-lg-Bpp">
+                                                    <rect key="frame" x="94" y="8" width="187" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="Wc9-4M-0Ch"/>
+                                                        <constraint firstAttribute="width" constant="187" id="gNm-kg-Cea"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="NTT-lg-Bpp" firstAttribute="centerY" secondItem="gJA-bg-nyF" secondAttribute="centerY" constant="-1.75" id="E6L-5D-6qK"/>
+                                                <constraint firstItem="NTT-lg-Bpp" firstAttribute="centerX" secondItem="gJA-bg-nyF" secondAttribute="centerX" id="hDg-Oc-i9g"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="menuText" destination="NTT-lg-Bpp" id="0Vi-T5-g67"/>
+                                            <segue destination="81c-4G-SHs" kind="showDetail" identifier="select" id="9zk-Cj-Nxp"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="zRO-6c-oaH" id="7BV-gB-5rX"/>
+                                    <outlet property="delegate" destination="zRO-6c-oaH" id="VUl-2i-Dz1"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="doS-5W-jJt" firstAttribute="top" secondItem="13e-7m-U60" secondAttribute="top" id="AY3-8q-wJI"/>
+                            <constraint firstItem="doS-5W-jJt" firstAttribute="leading" secondItem="13e-7m-U60" secondAttribute="leading" id="NuU-2r-0Sq"/>
+                            <constraint firstAttribute="trailing" secondItem="doS-5W-jJt" secondAttribute="trailing" id="knW-Jb-R8y"/>
+                            <constraint firstItem="uan-2B-eKj" firstAttribute="top" secondItem="doS-5W-jJt" secondAttribute="bottom" id="wOw-wS-UZa"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Categories" id="vos-NV-InC"/>
+                    <connections>
+                        <outlet property="tableView" destination="doS-5W-jJt" id="I43-Lb-ewL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aEo-xt-cCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="-633"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eQn-bM-gOH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dmh-mB-gVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" id="81c-4G-SHs" customClass="NavigationController" customModule="ProductHuntClient" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RXV-cH-lJN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="loo-eL-hnj"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1573.5999999999999" y="115.59220389805098"/>
         </scene>
     </scenes>
     <resources>
@@ -515,6 +598,7 @@ Share what's on your mind
         <image name="games" width="24" height="24"/>
         <image name="home" width="24" height="24"/>
         <image name="menu" width="24" height="24"/>
+        <image name="product-hunt-vertical-logo-red" width="2420" height="3034"/>
         <image name="tech" width="24" height="24"/>
     </resources>
 </document>

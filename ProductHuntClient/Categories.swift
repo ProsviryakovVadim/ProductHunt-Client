@@ -9,15 +9,15 @@
 import ObjectMapper
 
 final class Categories: Mappable {
-    var posts: [Category] = []
+    var category: [Category] = []
     init?(map: Map) {}
     func mapping(map: Map) {
-        posts <- map["categories"]
+        category <- map["categories"]
     }
 }
 
 final class Category: Mappable {
-    private(set) var category: Dictionary<String, AnyObject>?
+    private(set) var category: String = ""
     init?(map: Map) {}
     func mapping(map: Map) {
         category <- map["name"]

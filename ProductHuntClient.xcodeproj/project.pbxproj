@@ -16,6 +16,7 @@
 		DD2F839A1F102C3E00877847 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F83991F102C3E00877847 /* MenuController.swift */; };
 		DD2F839C1F10DA4F00877847 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F839B1F10DA4F00877847 /* WebController.swift */; };
 		DD2F83A21F11363D00877847 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2F83A11F11363D00877847 /* Categories.swift */; };
+		DD57CA741F1257360088950E /* MenuSelectedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD57CA731F1257360088950E /* MenuSelectedController.swift */; };
 		DDB90E0D1F0F718B002254E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB90E0C1F0F718B002254E8 /* AppDelegate.swift */; };
 		DDB90E0F1F0F718B002254E8 /* ProductListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB90E0E1F0F718B002254E8 /* ProductListController.swift */; };
 		DDB90E121F0F718B002254E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB90E101F0F718B002254E8 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		DD2F83991F102C3E00877847 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		DD2F839B1F10DA4F00877847 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
 		DD2F83A11F11363D00877847 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		DD57CA731F1257360088950E /* MenuSelectedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuSelectedController.swift; sourceTree = "<group>"; };
 		DDB90E091F0F718B002254E8 /* ProductHuntClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProductHuntClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB90E0C1F0F718B002254E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB90E0E1F0F718B002254E8 /* ProductListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 			children = (
 				DD2F83891F0FA7E400877847 /* NavigationController.swift */,
 				DD2F83991F102C3E00877847 /* MenuController.swift */,
+				DD57CA731F1257360088950E /* MenuSelectedController.swift */,
 				DDB90E0E1F0F718B002254E8 /* ProductListController.swift */,
 				DD2F83971F0FCEAE00877847 /* ProductDetailController.swift */,
 				DD2F839B1F10DA4F00877847 /* WebController.swift */,
@@ -179,7 +182,6 @@
 				TargetAttributes = {
 					DDB90E081F0F718B002254E8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = V6F9FUGHFC;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
@@ -283,6 +285,7 @@
 				DD2F83981F0FCEAE00877847 /* ProductDetailController.swift in Sources */,
 				DD2F83A21F11363D00877847 /* Categories.swift in Sources */,
 				DD2F839C1F10DA4F00877847 /* WebController.swift in Sources */,
+				DD57CA741F1257360088950E /* MenuSelectedController.swift in Sources */,
 				DDB90E0D1F0F718B002254E8 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +426,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = V6F9FUGHFC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ProductHuntClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -442,7 +445,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = V6F9FUGHFC;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ProductHuntClient/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
